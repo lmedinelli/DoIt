@@ -13,6 +13,9 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var taskNameText: UITextField!
     
     @IBOutlet weak var importantSwitch: UISwitch!
+    
+    var previousVC = TasksViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +23,17 @@ class CreateTaskViewController: UIViewController {
     }
 
     @IBAction func addTapped(_ sender: Any) {
+        
+        // create a Task from the outlet information
+        
+        let task = Task()
+        task.name = taskNameText.text!
+        task.important = importantSwitch.isOn
+        
+        // add a new task to array in previous viewcontroller
+        
+        previousVC.tasks.append(task)
+        
     }
     
     override func didReceiveMemoryWarning() {
