@@ -46,11 +46,56 @@
                     <connections>
                         <outlet property="tableView" destination="swN-Tc-Ief" id="wfE-Uj-bt3"/>
                         <segue destination="Bna-Ge-QeZ" kind="show" identifier="addSegue" id="m0l-XC-7et"/>
+                        <segue destination="3Ke-kg-xuJ" kind="show" identifier="selectTaskSegue" id="u6a-1C-8nU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--Complete Task View Controller-->
+        <scene sceneID="FGk-us-rGw">
+            <objects>
+                <viewController id="3Ke-kg-xuJ" customClass="CompleteTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PkB-ut-tDP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ij7-rR-6gk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CW2-za-K6E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pos-Yv-Onj">
+                                <rect key="frame" x="36" y="84" width="303" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSz-vf-udY">
+                                <rect key="frame" x="154" y="134" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="3Ke-kg-xuJ" eventType="touchUpInside" id="pMY-Vf-ppE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pos-Yv-Onj" secondAttribute="trailing" constant="20" id="4lv-Lv-9Kx"/>
+                            <constraint firstItem="Pos-Yv-Onj" firstAttribute="leading" secondItem="CW2-za-K6E" secondAttribute="leadingMargin" constant="20" id="5jl-PC-cbT"/>
+                            <constraint firstItem="Pos-Yv-Onj" firstAttribute="top" secondItem="PkB-ut-tDP" secondAttribute="bottom" constant="20" id="g6y-gX-CrX"/>
+                            <constraint firstItem="BSz-vf-udY" firstAttribute="centerX" secondItem="CW2-za-K6E" secondAttribute="centerX" id="j88-NA-Cx4"/>
+                            <constraint firstItem="BSz-vf-udY" firstAttribute="top" secondItem="Pos-Yv-Onj" secondAttribute="bottom" constant="20" id="r9L-ll-dbp"/>
+                            <constraint firstItem="Pos-Yv-Onj" firstAttribute="centerX" secondItem="CW2-za-K6E" secondAttribute="centerX" id="wgj-IZ-2UX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="taskLabel" destination="Pos-Yv-Onj" id="Hjz-kK-tkq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QmJ-ye-jYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="847"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="Uf4-NM-MQK">
